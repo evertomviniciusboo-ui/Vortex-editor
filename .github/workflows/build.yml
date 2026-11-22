@@ -16,7 +16,7 @@ jobs:
           gradle-version: '8.9'
       - name: Extrair projeto
         run: |
-          unzip -q vortex-editor.zip -d work
+          unzip -q VortexEditor-v0.3.zip -d work
           echo "PROJ=$(dirname "$(find work -name settings.gradle.kts | head -1)")" >> "$GITHUB_ENV"
       - name: Compilar APK
         run: gradle -p "$PROJ" assembleDebug --stacktrace
